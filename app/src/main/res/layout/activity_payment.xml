@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            style="@style/actionbar"
+            app:title="@string/title_payment"
+            app:titleTextColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="업체"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp" />
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_marginRight="4dp"
+                            android:textAlignment="textEnd"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            tools:text="업체명 :" />
+
+                        <TextView
+                            android:id="@+id/txtCompanyName"
+                            android:layout_columnWeight="1"
+                            android:layout_marginRight="8dp"
+                            android:textAlignment="textStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            tools:text="인문관 3층 복도" />
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_marginRight="4dp"
+                            android:textAlignment="textEnd"
+                            android:textSize="12dp"
+                            tools:text="연락처 :" />
+
+                        <TextView
+                            android:id="@+id/txtCompanyTel"
+                            android:layout_columnWeight="1"
+                            android:layout_marginRight="8dp"
+                            android:textAlignment="textStart"
+                            android:textSize="12dp"
+                            tools:text="010-0000-0000" />
+                    </GridLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="장치"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp" />
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_marginRight="4dp"
+                            android:textAlignment="textEnd"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            tools:text="위치 :" />
+
+                        <TextView
+                            android:id="@+id/txtMachineName"
+                            android:layout_columnWeight="1"
+                            android:layout_marginRight="8dp"
+                            android:textAlignment="textStart"
+                            android:textSize="12dp"
+                            tools:text="인문관 3층 복도" />
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_marginRight="4dp"
+                            android:textAlignment="textEnd"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            tools:text="종류 :" />
+
+                        <TextView
+                            android:id="@+id/txtMachineType"
+                            android:layout_columnWeight="1"
+                            android:layout_marginRight="8dp"
+                            android:textAlignment="textStart"
+                            android:textSize="12dp"
+                            tools:text="세탁기" />
+                    </GridLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="상품목록"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerProducts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/bottom_sheet"
+        layout="@layout/bottom_payment" />
+</android.support.design.widget.CoordinatorLayout>

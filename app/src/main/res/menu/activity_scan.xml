@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_card"
+        android:icon="@drawable/ic_card_one"
+        android:title="카드 등록"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_preference"
+        android:icon="@drawable/ic_invoice"
+        android:title="설정"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_user"
+        android:icon="@drawable/ic_user"
+        app:showAsAction="always"
+        android:title="사용자관리" />
+
+</menu>

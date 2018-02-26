@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.or.payot.poin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".Activities.Splash.SplashActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.Login.LoginActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".Activities.SignUp.SignUpActivity">
+
+        </activity>
+
+        <activity
+            android:name=".Activities.Scan.ScanActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Activities.CardAdd.CardAddActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Activities.UserPage.UserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Payment.PaymentActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <service android:name=".Service.PoinDeviceService"></service>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+    </application>
+
+</manifest>
